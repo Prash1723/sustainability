@@ -1,24 +1,39 @@
-[21:45:55] ╭─────────── Monthly carbon footprint ───────────╮                                                                                                  code.py:59
-           │ This month's carbon footprint : 42795.79 Kg    │                                                                                                            
+[23:09:32] ╭─────────── Monthly carbon footprint ───────────╮                                                                                                  code.py:83
+           │ This month's carbon footprint : 42501.79 lbs   │                                                                                                            
            │ Carbon footprint from electricity : 26250.00   │                                                                                                            
-           │ Kg | 61.34%                                    │                                                                                                            
+           │ lbs | 61.76%                                   │                                                                                                            
            │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━                   │                                                                                                            
-           │ Carbon footprint from gas : 15855.00 Kg |      │                                                                                                            
-           │ 37.05%                                         │                                                                                                            
+           │ Carbon footprint from gas : 15855.00 lbs |     │                                                                                                            
+           │ 37.30%                                         │                                                                                                            
            │ ━━━━━━━━━━━━━━━━━                              │                                                                                                            
-           │ Carbon footprint from oil usage : 339.00 Kg |  │                                                                                                            
-           │ 0.79%                                          │                                                                                                            
+           │ Carbon footprint from oil usage : 339.00 lbs | │                                                                                                            
+           │ 0.80%                                          │                                                                                                            
            │                                                │                                                                                                            
-           │ Carbon footprint from fuel usage : 0.79 Kg |   │                                                                                                            
+           │ Carbon footprint from fuel usage : 0.79 lbs |  │                                                                                                            
            │ 0.00%                                          │                                                                                                            
            │                                                │                                                                                                            
-           │ Carbon footprint from not recycling newspaper  │                                                                                                            
-           │ : 184.00 Kg | 0.43%                            │                                                                                                            
+           │ Carbon footprint from miscellaneous : 8.00 lbs │                                                                                                            
+           │ | 0.02%                                        │                                                                                                            
            │                                                │                                                                                                            
-           │ Carbon footprint from not recycling metal :    │                                                                                                            
-           │ 166.00 Kg | 0.39%                              │                                                                                                            
+           │ Carbon footprint by house type : 2.00 lbs |    │                                                                                                            
+           │ 0.00%                                          │                                                                                                            
            │                                                │                                                                                                            
-           │ Carbon footprint from miscellaneous : 1.00 Kg  │                                                                                                            
-           │ | 0.00%                                        │                                                                                                            
+           │ Carbon footprint by diet type : 8.00 lbs |     │                                                                                                            
+           │ 0.02%                                          │                                                                                                            
+           │                                                │                                                                                                            
+           │ Carbon footprint by washing machine runtime :  │                                                                                                            
+           │ 2.00 lbs | 0.00%                               │                                                                                                            
+           │                                                │                                                                                                            
+           │ Carbon footprint by items bought : 6.00 lbs |  │                                                                                                            
+           │ 0.01%                                          │                                                                                                            
+           │                                                │                                                                                                            
+           │ Carbon footprint by garbage produced : 5.00    │                                                                                                            
+           │ lbs | 0.01%                                    │                                                                                                            
+           │                                                │                                                                                                            
+           │ Carbon footprint from waste recycling : 24.00  │                                                                                                            
+           │ lbs | 0.06%                                    │                                                                                                            
+           │                                                │                                                                                                            
+           │ Carbon footprint from public transport usage : │                                                                                                            
+           │ 2.00 lbs | 0.00%                               │                                                                                                            
            │                                                │                                                                                                            
            ╰────────────────────────────────────────────────╯                                                                                                            

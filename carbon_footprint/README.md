@@ -7,11 +7,13 @@ Steps in the calculations :
 2. Gas bill * 105
 3. Oil usage * 113
 4. Total fuel consumption * 0.79
-5. Flight hours (4 hours or less) * 1100
-6. Flight hours (4 hours or more) * 4400
-7. Add 184 if you dont recycle newspaper
-8. Add 166 if you dont recycle aluminium and tin
-9. Add 1-8 together for total carbon footprint
+5. Waste recycling
+6. Size of house
+7. Type of diet
+8. Washing Machine runtime
+9. Items bought
+10. Garbage produced
+11. Transportation
 
 Note : All the metrics are in pounds
 
@@ -19,7 +21,9 @@ Note : All the metrics are in pounds
 
 **Tool** : Python 3.9.12
 
-**Resource** : https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/
+**Resources** : 
+1. https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/
+2. https://www.wikihow.com/Calculate-Your-Carbon-Footprint
 
 **Output** : Report.txt
 
