@@ -16,8 +16,11 @@ Steps in the calculations :
 Note : All the metrics are in pounds
 
 **Author** : Praveen Shekar
+
 **Tool** : Python 3.9.12
+
 **Resource** : https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/
+
 **Output** : Report.txt
 
-Modules used : Rich
+**Modules used** : Rich
