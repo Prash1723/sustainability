@@ -7,8 +7,6 @@ from rich.columns import Columns
 
 rc = Console()
 
-layout = Layout()
-
 # Initial carbon footprint
 CF = 0
 
