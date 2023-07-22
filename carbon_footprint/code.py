@@ -40,12 +40,12 @@ def misc_CF():
     """Miscellaneous emission"""
     return 1
 
-CF = electric_bill(500) + monthly_gas(293) + oil_spent(5) + fuel_spent(1) + newspaper_recycle() + metal_recycle() + misc_CF()
+CF = electric_bill(250) + monthly_gas(151) + oil_spent(3) + fuel_spent(1) + newspaper_recycle() + metal_recycle() + misc_CF()
 
 pc = Panel.fit(Columns(["This month's carbon footprint : {:.2f} Kg".format(CF), 
-    "Carbon footprint from electricity : {:.2f} Kg | {:.2f}%".format(electric_bill(500), electric_bill(500)*100/CF), ProgressBar(100, electric_bill(500)*100/CF),
-    "Carbon footprint from gas : {:.2f} Kg | {:.2f}%".format(monthly_gas(293), monthly_gas(293)*100/CF), ProgressBar(100, monthly_gas(300)*100/CF),
-    "Carbon footprint from oil usage : {:.2f} Kg | {:.2f}%".format(oil_spent(5), oil_spent(5)*100/CF), ProgressBar(100, oil_spent(5)*100/CF),
+    "Carbon footprint from electricity : {:.2f} Kg | {:.2f}%".format(electric_bill(250), electric_bill(250)*100/CF), ProgressBar(100, electric_bill(250)*100/CF),
+    "Carbon footprint from gas : {:.2f} Kg | {:.2f}%".format(monthly_gas(151), monthly_gas(151)*100/CF), ProgressBar(100, monthly_gas(151)*100/CF),
+    "Carbon footprint from oil usage : {:.2f} Kg | {:.2f}%".format(oil_spent(3), oil_spent(3)*100/CF), ProgressBar(100, oil_spent(3)*100/CF),
     "Carbon footprint from fuel usage : {:.2f} Kg | {:.2f}%".format(fuel_spent(1), fuel_spent(1)*100/CF), ProgressBar(100, fuel_spent(1)*100/CF),
     "Carbon footprint from not recycling newspaper : {:.2f} Kg | {:.2f}%".format(newspaper_recycle(), newspaper_recycle()*100/CF), ProgressBar(100, newspaper_recycle()*100/CF),
     "Carbon footprint from not recycling metal : {:.2f} Kg | {:.2f}%".format(metal_recycle(), metal_recycle()*100/CF), ProgressBar(100, metal_recycle()*100/CF),
