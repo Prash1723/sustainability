@@ -18,6 +18,7 @@ def fuel_spent(x):
 
 def misc_CF(x):
     """Number of members in the house"""
+    cf = 0
     if x == 1:
         cf = 14
     elif x == 2:
@@ -37,6 +38,7 @@ def misc_CF(x):
 
 def house_size(x):
     """Calculate carbon footprint based on size of home"""
+    cf = 0
     if x == 'large':
         cf = 10
     elif x == 'medium':
@@ -50,6 +52,7 @@ def house_size(x):
 
 def diet(x):
     """Calculate carbon mass based on type of diet"""
+    cf = 0
     if x == 'daily':
         cf = 10
     elif x == 'few':
@@ -63,11 +66,12 @@ def diet(x):
 
 def machine(x):
     """Calculate carbon footprint based on machine runtime"""
+    cf = 0
     if x > 9:
         cf = 3
-    elif x.between(4,9):
+    elif x in range(4,9):
         cf = 2
-    elif x.between(1,3):
+    elif x in range(1,3):
         cf = 1
     else :
         cf = 0
@@ -76,11 +80,12 @@ def machine(x):
 
 def new_items(x):
     """Calculate carbon footprint based on items bought each year"""
+    cf = 0
     if x > 7:
         cf = 10
-    elif x.between(5,7):
+    elif x in range(5,7):
         cf = 8
-    elif x.between(3,5):
+    elif x in range(3,5):
         cf = 6
     elif x < 3:
         cf = 4
@@ -91,6 +96,7 @@ def new_items(x):
 
 def garbage_mass(x):
     """Calculate carbon footprint based on garbage produced"""
+    cf = 0
     if x == 4:
         cf = 50
     elif x == 3:
@@ -104,24 +110,26 @@ def garbage_mass(x):
 
     return cf
 
-def waste_recycle():
+def waste_recycle(x):
     """Add carbon mass based on waste recycled"""
-    if x = 0:
+    cf = 0
+    if x == 0:
         cf = 24
     else:
         cf = 20
 
     return cf
 
-def public_transport():
+def public_transport(x):
     """Add carbon mass for public transportation usage"""
-    if x>32400:
+    cf = 0
+    if x > 32400:
         cf = 12
-    elif x.between(24300,32400):
+    elif x in range(24300,32400):
         cf = 10
-    elif x.between(16200,32400):
+    elif x in range(16200,32400):
         cf = 6
-    elif x.between(1620,16200):
+    elif x in range(1620,16200):
         cf = 4
     else:
         cf = 2
