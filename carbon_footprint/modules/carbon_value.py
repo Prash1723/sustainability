@@ -2,19 +2,19 @@
 
 def electric_bill(x):
     """Calculates carbon mass for electricity consumption"""
-    return x*105
+    return round(x*105*0.45359237,2)
 
 def monthly_gas(x):
     """Calculates carbon emissions for gas bill"""
-    return x*105
+    return round(x*105*0.45359237, 2)
 
 def oil_spent(x):
     """Calculates carbon emissions for oil"""
-    return x*113
+    return round(x*113*0.45359237, 2)
 
 def fuel_spent(x):
     """Calculates carbon emissions for fuel spent"""
-    return x*0.79
+    return round(x*0.79*0.45359237, 2)
 
 def misc_CF(x):
     """Number of members in the house"""
@@ -34,7 +34,7 @@ def misc_CF(x):
     else:
         cf = 2
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def house_size(x):
     """Calculate carbon footprint based on size of home"""
@@ -48,7 +48,7 @@ def house_size(x):
     else:
         cf = 2
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def diet(x):
     """Calculate carbon mass based on type of diet"""
@@ -62,7 +62,7 @@ def diet(x):
     elif x == 'vegan' or x == 'wild meat':
         cf = 2
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def machine(x):
     """Calculate carbon footprint based on machine runtime"""
@@ -76,7 +76,7 @@ def machine(x):
     else :
         cf = 0
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def new_items(x):
     """Calculate carbon footprint based on items bought each year"""
@@ -92,7 +92,7 @@ def new_items(x):
     else:
         cf = 2
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def garbage_mass(x):
     """Calculate carbon footprint based on garbage produced"""
@@ -108,7 +108,7 @@ def garbage_mass(x):
     else:
         cf == 5
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def waste_recycle(x):
     """Add carbon mass based on waste recycled"""
@@ -118,7 +118,7 @@ def waste_recycle(x):
     else:
         cf = 20
 
-    return cf
+    return round(cf*0.45359237, 2)
 
 def public_transport(x):
     """Add carbon mass for public transportation usage"""
@@ -134,4 +134,4 @@ def public_transport(x):
     else:
         cf = 2
 
-    return cf
+    return round(cf*0.45359237, 2)
