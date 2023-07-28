@@ -19,7 +19,7 @@ df = pd.read_csv(r'data/energy consumption.csv')
 
 df1 = df.groupby('Name').apply(lambda s: pd.Series({
         'electric_cf': s['Electricity'].apply(electric_bill),
-        'gas_cf': s['monthly_gas'].apply(monthly_gas),
+        'gas_cf': s['Gas'].apply(monthly_gas),
         'oil_cf': s['Oil'].apply(oil_spent),
         'fuel_cf': s['Fuel'].apply(fuel_spent),
         'misc_cf': s['Miscellaneous'].apply(misc_CF),
@@ -29,32 +29,10 @@ df1 = df.groupby('Name').apply(lambda s: pd.Series({
         'dw_cf': s['Dishwasher_freq'].apply(machine),
         'items_cf': s['Items_bought'].apply(new_items),
         'garbage_cf': s['Garbage_produced'].apply(garbage_mass),
-        'waste_cf': s['Waste recycled'].apply(waste_recycle),
+        'waste_cf': s['Waste_recycled'].apply(waste_recycle),
         'transport_cf': s['public_transport'].apply(public_transport)
-    })
+    })).reset_index()
 
-#CF = electric_bill(250) + monthly_gas(151) + oil_spent(3) + fuel_spent(1) + misc_CF(3) + house_size('apt') + diet('few') + machine(5) + new_items(0) + garbage_mass(1) + waste_recycle(0) + public_transport(2000)
+df1['Carbon_footprint'] = df1['electric_cf'] + df1['gas_cf'] + df1['oil_cf'] + df1['fuel_cf'] + df1['misc_cf'] + df1['house_cf'] + df1['diet_cf'] + df1['wm_cf'] + df1['dw_cf'] + df1['items_cf'] + df1['garbage_cf'] + df1['waste_cf'] + df1['transport_cf']
 
-#pc = Panel.fit(Columns(["This month's carbon footprint : {:.2f} lbs".format(CF),
-#    "Carbon footprint from electricity : {:.2f} lbs | {:.2f}%".format(electric_bill(250), electric_bill(250)*100/CF), ProgressBar(100, electric_bill(250)*100/CF),
-#    "Carbon footprint from gas : {:.2f} lbs | {:.2f}%".format(monthly_gas(151), monthly_gas(151)*100/CF), ProgressBar(100, monthly_gas(151)*100/CF),
-#    "Carbon footprint from oil usage : {:.2f} lbs | {:.2f}%".format(oil_spent(3), oil_spent(3)*100/CF), ProgressBar(100, oil_spent(3)*100/CF),
-#    "Carbon footprint from fuel usage : {:.2f} lbs | {:.2f}%".format(fuel_spent(1), fuel_spent(1)*100/CF), ProgressBar(100, fuel_spent(1)*100/CF),
-#    "Carbon footprint from miscellaneous : {:.2f} lbs | {:.2f}%".format(misc_CF(3), misc_CF(3)*100/CF), ProgressBar(100, misc_CF(3)*100/CF),
-#    "Carbon footprint by house type : {:.2f} lbs | {:.2f}%".format(house_size('apt'), house_size('apt')*100/CF), ProgressBar(100, house_size('apt')*100/CF),
-#    "Carbon footprint by diet type : {:.2f} lbs | {:.2f}%".format(diet('few'), diet('few')*100/CF), ProgressBar(100, diet('few')*100/CF),
-#    "Carbon footprint by washing machine runtime : {:.2f} lbs | {:.2f}%".format(machine(5), machine(5)*100/CF), ProgressBar(100, machine(5)*100/CF),
-#    "Carbon footprint by items bought : {:.2f} lbs | {:.2f}%".format(new_items(0), new_items(0)*100/CF), ProgressBar(100, new_items(0)*100/CF),
-#    "Carbon footprint by garbage produced : {:.2f} lbs | {:.2f}%".format(garbage_mass(1), garbage_mass(1)*100/CF), ProgressBar(100, garbage_mass(1)*100/CF),
-#    "Carbon footprint from waste recycling : {:.2f} lbs | {:.2f}%".format(waste_recycle(0), waste_recycle(0)*100/CF), ProgressBar(100, waste_recycle(0)*100/CF),
-#    "Carbon footprint from public transport usage : {:.2f} lbs | {:.2f}%".format(public_transport(2000),
-#        public_transport(2000)*100/CF), ProgressBar(100, public_transport(2000)*100/CF)]),
-#    title="Monthly carbon footprint",
-#    width=50,
-#    style="yellow",
-#    border_style="red"
-#)
-
-#rc.log(pc)
-
-rc.log(df1)
+rc.print(df1[['Name', 'Carbon_footprint']])
