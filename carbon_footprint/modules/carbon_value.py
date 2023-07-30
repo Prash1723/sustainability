@@ -1,5 +1,4 @@
 
-
 def electric_bill(x):
     """Calculates carbon mass for electricity consumption"""
     return round(x*105*0.45359237,2)
@@ -135,3 +134,5 @@ def public_transport(x):
         cf = 2
 
     return round(cf*0.45359237, 2)
+
+

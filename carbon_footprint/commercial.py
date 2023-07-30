@@ -10,10 +10,10 @@ from modules.carbon_value import *
 rc = Console()
 
 # Read data
-df = pd.read_csv(r'data/energy consumption.csv')
+df = pd.read_csv(r'data/office_data.csv')
 
 df1 = df.groupby('Name').apply(lambda s: pd.Series({
-    'electric_cf': s['Electricity'].apply(electric_bill),
+    'electricity_cf': s['Electricity'].apply(electric_bill),
     'gas_cf': s['Gas'].apply(monthly_gas),
     'oil_cf': s['Oil'].apply(oil_spent),
     'fuel_cf': s['Fuel'].apply(fuel_spent),
