@@ -101,11 +101,11 @@ def garbage_mass(x):
     elif x == 3:
         cf = 40
     elif x == 2:
-        cf == 30
+        cf = 30
     elif x == 1:
-        cf == 20
+        cf = 20
     else:
-        cf == 5
+        cf = 5
 
     return round(cf*0.45359237, 2)
 
